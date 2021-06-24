@@ -1,5 +1,6 @@
 package com.hasanaydin.catchthecat
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.CountDownTimer
@@ -77,6 +78,8 @@ class MainActivity : AppCompatActivity() {
                 }
                 alert.setNegativeButton("No"){dialog, which ->
                     Toast.makeText(this@MainActivity, "Game Over", Toast.LENGTH_SHORT).show()
+                    var intent = Intent(this@MainActivity,StartActivity::class.java)
+                    startActivity(intent)
                 }
                 alert.show()
             }
